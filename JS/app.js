@@ -10,6 +10,8 @@ var firebaseConfig = {
     appId: "1:470660630915:web:0cb91d8d3083233d488eb6"
   };
 
+  firebase.initializeApp(firebaseConfig);
+
 var app = initializeApp(firebaseConfig);
 const openModal = document.getElementById('openRegisterModal')
 const modal = document.getElementById('modal')
