@@ -1,6 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyAW_vJQ1HAlg7FoQH6nzbji8AgHEFv_68U",
     authDomain: "guitarapi-b6d03.firebaseapp.com",
     databaseURL: "https://guitarapi-b6d03-default-rtdb.firebaseio.com",
@@ -10,14 +9,14 @@ var firebaseConfig = {
     appId: "1:470660630915:web:0cb91d8d3083233d488eb6"
   };
 
-  firebase.initializeApp(firebaseConfig);
+ const app = initializeApp(firebaseConfig);
+ const database = getDatabase();
 
-var app = initializeApp(firebaseConfig);
 const openModal = document.getElementById('openRegisterModal')
 const modal = document.getElementById('modal')
 const closeModal = document.getElementById('cancelRegistreModal')
 const registerForm = document.getElementById('registerForm')
-const guitarRef = app.database().ref('guitars')
+//const guitarRef = app.database().ref('guitars')
 
 const showRegisterModal = () => {
     modal.classList.toggle('is-active')
